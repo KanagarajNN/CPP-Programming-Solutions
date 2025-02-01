@@ -1,3 +1,8 @@
+// Language: C++
+// Solution 1: Bubble Sort Algorithm 
+// Time: Worst - O(N^2), Avg - O(N^2), Best - O(N)
+// Space: O(1)
+
 #include <vector>
 #include <iostream>
 using namespace std;
