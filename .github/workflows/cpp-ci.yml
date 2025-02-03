@@ -1,0 +1,33 @@
+name: C++ CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: sudo apt-get update && sudo apt-get install -y cmake g++ libgtest-dev
+
+      - name: Build Google Test
+        run: |
+          cd /usr/src/googletest
+          sudo cmake . && sudo make
+          sudo cp -r googletest/include/gtest /usr/local/include/
+          sudo cp lib/*.a /usr/local/lib/
+
+      - name: Compile C++ Code
+        run: g++ -o test_bubble_sort sorting/bubble_sort/tests/test_bubble_sort.cpp sorting/bubble_sort/src/bubble_sort.cpp -lgtest -lgtest_main -pthread -std=c++17
+
+      - name: Run Google Test
+        run: ./test_bubble_sort
