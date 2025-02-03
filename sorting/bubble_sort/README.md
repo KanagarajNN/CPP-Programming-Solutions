@@ -1,4 +1,4 @@
-![CPP CI](https://github.com/kanagarajnn/c-programming-solutions/actions/workflows/cpp-ci.yml/badge.svg)
+![CPP CI](https://github.com/kanagarajnn/cpp-programming-solutions/actions/workflows/cpp-ci.yml/badge.svg)
 
 # Bubble Sort Algorithm in C++
 
