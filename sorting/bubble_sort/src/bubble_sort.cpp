@@ -33,6 +33,8 @@ using std::endl;
 using std::vector;
 
 void bubble_sort(vector<int>& arr) {
+    if (arr.empty()) return;
+    
     bool swapped;
     for (size_t i = 0; i < arr.size() - 1; i++) {
         swapped = false;
