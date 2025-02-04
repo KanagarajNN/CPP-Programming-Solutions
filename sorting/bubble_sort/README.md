@@ -26,6 +26,21 @@
 ## Space Complexity
 - **O(1)** (In-place sorting algorithm)
 
+## Directory Structure
+```
+cpp-programming-solutions/
+  ├── sorting/
+  │   ├── bubble-sort/
+  │   │   ├── include/
+  │   │   │   ├── bubble_sort.h
+  │   │   ├── src/
+  │   │   │   ├── bubble_sort.cpp
+  │   │   ├── tests/
+  │   │   │   ├── test_bubble_sort.cpp
+  ├── LICENSE
+  ├── README.md
+```
+
 ## Installation & Usage
 
 ### 1. Clone the Repository
